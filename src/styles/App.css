@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f3f1;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f3f1;
+}
+
+.App {
+  width: 800px;
+  margin-top: 60px;
+}
+
+.album {
+  display: flex;
+  padding: 26px;
+  border: 3px solid #566573;
+  margin-top: 5px;
+  justify-content: space-between;
+  align-items: center;
+  color: #566573;
+  /* font-weight: bold; */
+  font-family: Comic Sans MS, Comic Sans, fantasy;
+  /* font-variant: small-caps; */
+}
+
+.album-enter {
+  transform: translateX(-350px)
+}
+.album-enter-active {
+  transform: translateX(0px);
+  transition: all 500ms ease-in;
+}
+.album-exit {
+  opacity: 1;
+}
+.album-exit-active {
+  transform: translateX(350px);
+  transition: all 500ms ease-in;
+}
+
+.page__wrapper {
+  margin-top: 30px;
+  display: flex;
+}
+
+.page {
+  padding: 10px;
+  border: 1px solid #566573;
+  cursor: pointer;
+}
+
+.page__current {
+  padding: 10px;
+  border: 2px solid orange;
+  font-weight: bold;
+}
+
+.navbar {
+  position: fixed;
+  height: 120px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background: #f5f3f1;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+  border: 1px solid transparent;
+}
+
+.navbar__name {
+  padding: 2px 15px;
+  font-family: Comic Sans MS, Comic Sans, fantasy;
+  font-size: 40px;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: #566573;
+}
+
+.navbar__link1 {
+  margin-left: auto;
+  padding: 2px 15px;
+}
+
+.navbar__link2 {
+  padding: 2px 15px;
+}
+.navbar__link1 a {
+  color: #566573;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Comic Sans MS, Comic Sans, fantasy;
+  font-variant: small-caps;
+}
+
+.navbar__link2 a {
+  color: #566573;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Comic Sans MS, Comic Sans, fantasy;
+  font-variant: small-caps;
+}
+
+.aboutPage {
+  font-size: 30px;
+  margin-top: 270px;
+  color: #566573;
+  font-family: Comic Sans MS, Comic Sans, fantasy;
+  font-variant: small-caps;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 15px;
+  font-family: Comic Sans MS, Comic Sans, fantasy;
+  font-variant: small-caps;
+  color: #566573;
+}
+
