@@ -1,13 +1,8 @@
 import axios from "axios";
 
 export default class AlbumService {
-  static async getAll(limit = 5, page = 1) {
-    const response = await axios.get('https://my-json-server.typicode.com/katyi/mockjson/albums',
-      {params: {
-          _limit: limit,
-          _page: page,
-        }
-      })
+  static async getAll() {
+    const response = await axios.get('https://my-json-server.typicode.com/katyi/mockjson/albums');
       return response;
   }
 

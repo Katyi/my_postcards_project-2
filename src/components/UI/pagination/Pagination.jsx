@@ -1,20 +1,25 @@
 import React from "react";
 import { getPagesArray } from "../../../utils/pages";
 
-const Pagination = ({totalPages, page, changePage}) => {
-  let pagesArray = getPagesArray(totalPages);
+const Pagination = ({ limit, totalAlbums, page, paginate }) => {
+  const pageNumbers = [];
+
+  for (let i = 1; i <= Math.ceil(totalAlbums / limit); i++) {
+    pageNumbers.push(i);
+  }
+
   return (
     <div className="page__wrapper">
-        {pagesArray.map(p =>
-          <span
-            onClick={() => changePage(p)}
-            key={p}
-            className={page === p ? 'page__current' : 'page'}
-          >
-            {p}
-          </span>
-        )}
-      </div>
+      {pageNumbers.map(number =>
+        <span
+          onClick={() => paginate(number)}
+          key={number}
+          className={page === number ? 'page page__current' : 'page'}
+        >
+          {number}
+        </span>
+      )}
+    </div>
   );
 };
 

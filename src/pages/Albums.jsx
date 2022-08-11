@@ -7,47 +7,43 @@ import MyButton from "../components/UI/button/MyButton";
 import AlbumService from "../components/API/AlbumService";
 import Loader from "../components/UI/Loader/Loader";
 import { useFetching } from "../hooks/useFetching";
-import { getPageCount } from '../utils/pages';
 import Pagination from "../components/UI/pagination/Pagination";
 
 function Albums() {
   const [albums, setAlbums] = useState([]);
   const [modal, setModal] = useState(false);
-  const [totalPages, setTotalPages] = useState(0);
-  const [limit, setLimit] = useState(5);
+  const [limit] = useState(5);
   const [page, setPage] = useState(1);
-  let [total, setTotal] = useState(13);
-  
-  
-  const [fetchAlbums, isAlbumsLoading, albumError] = useFetching(async (limit, page) => {
-    const response = await AlbumService.getAll(limit, page);
-    setAlbums(response.data)
-    let totalCount = response.headers['x-total-count'];
-    setTotalPages(getPageCount(totalCount, limit));
-  })
-  
-  useEffect(() => {
-    fetchAlbums(limit, page)
-  }, [])
 
+  const indexOfLastAlbum = page * limit;
+  const indexOfFirstAlbum = indexOfLastAlbum - limit;
+  const currentAlbums = albums.slice(indexOfFirstAlbum, indexOfLastAlbum);
+
+  const [fetchAlbums, isAlbumsLoading, albumError] = useFetching(async () => {
+    const response = await AlbumService.getAll();
+    setAlbums(response.data);
+  })
+
+  useEffect(() => {
+    fetchAlbums()
+  }, [])
+  
   const createAlbum = async (album) => {
+    const lastPage = Math.ceil(albums.length / limit);
+    changePage(lastPage)
     const newAlbum = {
-      ...album, id: total + 1
+      ...album, id: albums.length + 1
     }
     setAlbums([...albums, newAlbum])
-    setTotal(total + 1)
     setModal(false)
+    
   }
   
   const removeAlbum = (album) => {
     setAlbums(albums.filter(a => a.id !== album.id))
   }
 
-  const changePage = (page) => {
-    setPage(page)
-    fetchAlbums(limit, page)
-    console.log(albums);
-  }
+  const changePage = (pageNumber) => setPage(pageNumber);
   
   return (
     <div className="App">
@@ -60,17 +56,12 @@ function Albums() {
       
       {albumError &&
         <h1>Произошла ошибка ${albumError}</h1>
-
       }
       {isAlbumsLoading
         ? <div style={{ display: 'flex', justifyContent: 'center', marginTop: 250 }}><Loader /></div>
-        : <AlbumList remove={removeAlbum} albums={albums} title="Albums of postcards"/>
+        : <AlbumList remove={removeAlbum} albums={currentAlbums} title="Albums of postcards"/>
       }
-      <Pagination
-        page={page}
-        changePage={changePage}
-        totalPages={totalPages}
-      />
+      <Pagination limit={limit} totalAlbums={albums.length} paginate={changePage} page={page} />
     </div>
   );
 }
