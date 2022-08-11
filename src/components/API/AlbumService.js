@@ -5,7 +5,7 @@ export default class AlbumService {
     const response = await axios.get('https://my-json-server.typicode.com/katyi/mockjson/albums',
       {params: {
           _limit: limit,
-          _page: page
+          _page: page,
         }
       })
       return response;

@@ -1,22 +1,14 @@
 import React, {useState} from "react";
-// import Albums from "../pages/Albums";
 import MyButton from "./UI/button/MyButton";
 import MyInput from "./UI/input/MyInput";
-import AlbumService from "./API/AlbumService";
 
-
-
-const AlbumForm = ({ create }) => {
+const AlbumForm = ({create}) => {
   const [album, setAlbum] = useState({ title: '', description: '' });
 
-  const addNewAlbum = async (e) => {
+  const addNewAlbum = (e) => {
     e.preventDefault()
-    
-    const newAlbum = {
-      ...album, id: Date.now()
-    }
-    create(newAlbum)
-    setAlbum({title: '', description: ''})
+    create(album)
+    setAlbum({ title: '', description: '' })
   }
 
   return (

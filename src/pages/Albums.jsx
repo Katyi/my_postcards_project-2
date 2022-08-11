@@ -16,23 +16,26 @@ function Albums() {
   const [totalPages, setTotalPages] = useState(0);
   const [limit, setLimit] = useState(5);
   const [page, setPage] = useState(1);
+  let [total, setTotal] = useState(13);
   
   
   const [fetchAlbums, isAlbumsLoading, albumError] = useFetching(async (limit, page) => {
     const response = await AlbumService.getAll(limit, page);
     setAlbums(response.data)
-    const totalCount = (response.headers['x-total-count']);
-    console.log(totalCount);
-    console.log(page);
+    let totalCount = response.headers['x-total-count'];
     setTotalPages(getPageCount(totalCount, limit));
   })
-
+  
   useEffect(() => {
-    fetchAlbums(limit,page)
+    fetchAlbums(limit, page)
   }, [])
 
-  const createAlbum = (newAlbum) => {
+  const createAlbum = async (album) => {
+    const newAlbum = {
+      ...album, id: total + 1
+    }
     setAlbums([...albums, newAlbum])
+    setTotal(total + 1)
     setModal(false)
   }
   
@@ -43,6 +46,7 @@ function Albums() {
   const changePage = (page) => {
     setPage(page)
     fetchAlbums(limit, page)
+    console.log(albums);
   }
   
   return (
@@ -54,14 +58,13 @@ function Albums() {
       <AlbumForm create={createAlbum} />
       </MyModal>
       
-      {/* <hr style={{ margin: '15px 0' }} /> */}
       {albumError &&
         <h1>Произошла ошибка ${albumError}</h1>
 
       }
       {isAlbumsLoading
-        ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 250}}><Loader/></div>
-        : <AlbumList remove={removeAlbum} albums={albums} title="Albums of postcards" />
+        ? <div style={{ display: 'flex', justifyContent: 'center', marginTop: 250 }}><Loader /></div>
+        : <AlbumList remove={removeAlbum} albums={albums} title="Albums of postcards"/>
       }
       <Pagination
         page={page}
