@@ -29,21 +29,22 @@ function Albums() {
   }, [])
   
   const createAlbum = async (album) => {
-    const lastPage = Math.ceil(albums.length / limit);
-    changePage(lastPage)
+    const lastPage = Math.ceil((albums.length + 1) / limit);
     const newAlbum = {
       ...album, id: albums.length + 1
     }
     setAlbums([...albums, newAlbum])
     setModal(false)
-    
+    changePage(lastPage)
   }
   
   const removeAlbum = (album) => {
     setAlbums(albums.filter(a => a.id !== album.id))
   }
 
-  const changePage = (pageNumber) => setPage(pageNumber);
+  const changePage = (pageNumber) => {
+    setPage(pageNumber);
+  }
   
   return (
     <div className="App">
@@ -55,7 +56,7 @@ function Albums() {
       </MyModal>
       
       {albumError &&
-        <h1>Произошла ошибка ${albumError}</h1>
+        <div className="aboutPage">An error has occurred ${albumError}</div>
       }
       {isAlbumsLoading
         ? <div style={{ display: 'flex', justifyContent: 'center', marginTop: 250 }}><Loader /></div>

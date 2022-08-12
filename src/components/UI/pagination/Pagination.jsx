@@ -1,5 +1,4 @@
 import React from "react";
-import { getPagesArray } from "../../../utils/pages";
 
 const Pagination = ({ limit, totalAlbums, page, paginate }) => {
   const pageNumbers = [];
@@ -14,7 +13,7 @@ const Pagination = ({ limit, totalAlbums, page, paginate }) => {
         <span
           onClick={() => paginate(number)}
           key={number}
-          className={page === number ? 'page page__current' : 'page'}
+          className={page === number ? 'page__current' : 'page'}
         >
           {number}
         </span>

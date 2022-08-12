@@ -5,9 +5,9 @@ import AlbumItem from "./AlbumItem";
 const AlbumList = ({ albums, title, remove }) => {
   if (!albums.length) {
     return (
-      <h1 style={{textAlign: 'center'}}>
-        Альбомы открыток не найдены!
-      </h1>
+      <div className="aboutPage">
+        Postcard albums not found!
+      </div>
     )
   }
      
