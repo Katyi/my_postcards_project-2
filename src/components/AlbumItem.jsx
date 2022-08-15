@@ -4,7 +4,6 @@ import MyButton from "./UI/button/MyButton";
 
 const AlbumItem = (props) => {
   let navigate = useNavigate();
-
   return (
       <div className="album">
         <div className="album__content">

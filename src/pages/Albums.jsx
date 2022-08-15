@@ -21,7 +21,7 @@ function Albums() {
 
   const [fetchAlbums, isAlbumsLoading, albumError] = useFetching(async () => {
     const response = await AlbumService.getAll();
-    setAlbums(response.data);
+    setAlbums(response);
   })
 
   useEffect(() => {

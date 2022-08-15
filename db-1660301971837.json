@@ -1,0 +1,251 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "title": "Alice in Wonderland",
+      "description": "Postcards on the theme Alice in Wonderland"
+    },
+    {
+      "id": 2,
+      "title": "Animals",
+      "description": "Postcards on the theme Animals"
+    },
+    {
+      "id": 3,
+      "title": "Cities of Russia",
+      "description": "Postcards on the theme Cities of Russia from Kartinka24RU"
+    },
+    {
+      "id": 4,
+      "title": "Harry Potter",
+      "description": "Postcards on the theme Harry Potter"
+    },
+    {
+      "id": 5,
+      "title": "Lighthouses",
+      "description": "Postcards on the theme Lighthouses"
+    },
+    {
+      "id": 6,
+      "title": "Postcrossing",
+      "description": "Postcards on the theme Postcrossing"
+    },
+    {
+      "id": 7,
+      "title": "KeepCalm",
+      "description": "Postcards on the theme KeepCalm"
+    },
+    {
+      "id": 8,
+      "title": "The Lord of the Rings & The Hobbit",
+      "description": "Postcards on the theme The Lord of the Rings & The Hobbit"
+    },
+    {
+      "id": 9,
+      "title": "Cities of the World",
+      "description": "Postcards on the theme Cities of the World"
+    },
+    {
+      "id": 10,
+      "title": "Nature",
+      "description": "Postcards on the theme Nature"
+    },
+    {
+      "id": 11,
+      "title": "Bridges",
+      "description": "Postcards on the theme Bridges"
+    },
+    {
+      "id": 12,
+      "title": "Churches",
+      "description": "Postcards on the theme Churches"
+    },
+    {
+      "id": 13,
+      "title": "Fairy Tales",
+      "description": "Postcards on the theme Fairy Tales"
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 1,
+      "id": 1,
+      "title": "Alice1",
+      "url": "https://user-images.githubusercontent.com/26092469/181903898-84d2d68e-6439-4204-acc1-a616655dd290.jpg"
+    },
+    {
+      "albumId": 1,
+      "id": 2,
+      "title": "Alice2",
+      "url": "https://user-images.githubusercontent.com/26092469/181903900-28531549-da79-45ef-bf41-75655e22ef33.jpg"
+    },
+    {
+      "albumId": 1,
+      "id": 3,
+      "title": "Alice3",
+      "url": "https://user-images.githubusercontent.com/26092469/181916139-21c4eb12-aacb-4c40-8d91-ee48e8e25ef6.jpg"
+    },
+    {
+      "albumId": 1,
+      "id": 4,
+      "title": "Alice4",
+      "url": "https://user-images.githubusercontent.com/26092469/181916134-24230fad-7465-43d6-a87d-891a69811cdc.jpg"
+    },
+    {
+      "albumId": 1,
+      "id": 5,
+      "title": "Alice5",
+      "url": "https://user-images.githubusercontent.com/26092469/181916135-8691527a-e8dc-4b98-9617-8bd8f4f5a9f0.jpg"
+    },
+    {
+      "albumId": 1,
+      "id": 6,
+      "title": "Alice6",
+      "url": "https://user-images.githubusercontent.com/26092469/181916137-88bec3fa-825d-49b7-922b-8728fed8ccaa.jpg"
+    },
+    {
+      "albumId": 1,
+      "id": 7,
+      "title": "Alice7",
+      "url": "https://user-images.githubusercontent.com/26092469/181916138-33455a86-890c-4db6-ab1e-52f8e704d676.jpg"
+    },
+    {
+      "albumId": 2,
+      "id": 8,
+      "title": "Animal1",
+      "url": "https://user-images.githubusercontent.com/26092469/181903901-f14676f6-8b44-4564-a24d-b97724bdf22a.jpg"
+    },
+    {
+      "albumId": 2,
+      "id": 9,
+      "title": "Animal2",
+      "url": "https://user-images.githubusercontent.com/26092469/181903902-e5a722d1-6912-4fa0-8126-44e7a4800723.jpg"
+    },
+    {
+      "albumId": 3,
+      "id": 10,
+      "title": "CitiesRussia1",
+      "url": "https://user-images.githubusercontent.com/26092469/181903903-c787fbeb-014a-4887-91f9-bcac93cb0f6b.jpg"
+    },
+    {
+      "albumId": 3,
+      "id": 11,
+      "title": "CitiesRussia2",
+      "url": "https://user-images.githubusercontent.com/26092469/181903905-d2301882-046a-4caf-a140-1de72400ab86.jpg"
+    },
+    {
+      "albumId": 4,
+      "id": 12,
+      "title": "Harry Potter1",
+      "url": "https://user-images.githubusercontent.com/26092469/181903906-a3e82f83-fd31-409d-802e-4245544c139b.jpg"
+    },
+    {
+      "albumId": 4,
+      "id": 13,
+      "title": "Harry Potter2",
+      "url": "https://user-images.githubusercontent.com/26092469/181903907-58161947-d80a-4fdd-bf9f-762213529761.jpg"
+    },
+    {
+      "albumId": 5,
+      "id": 14,
+      "title": "Lighthouses1",
+      "url": "https://user-images.githubusercontent.com/26092469/181903908-b0d628ef-ea0b-416f-bc55-8aec05b0dce3.jpg"
+    },
+    {
+      "albumId": 5,
+      "id": 15,
+      "title": "Lighthouses2",
+      "url": "https://user-images.githubusercontent.com/26092469/181903909-b9ad95e5-4bde-4310-9c14-e470d2299653.jpg"
+    },
+    {
+      "albumId": 6,
+      "id": 16,
+      "title": "Postcrossing1",
+      "url": "https://user-images.githubusercontent.com/26092469/181910944-a6b3c0fd-2676-4846-b39a-0269842ae18c.jpg"
+    },
+    {
+      "albumId": 6,
+      "id": 17,
+      "title": "Postcrossing2",
+      "url": "https://user-images.githubusercontent.com/26092469/181910959-46f0eeee-3022-4d8e-8de3-2b100cb79b66.jpg"
+    },
+    {
+      "albumId": 7,
+      "id": 18,
+      "title": "KeepCalm1",
+      "url": "https://user-images.githubusercontent.com/26092469/181912470-73cdbb65-9b30-4c2e-a898-9c395aac7f39.jpg"
+    },
+    {
+      "albumId": 7,
+      "id": 19,
+      "title": "KeepCalm2",
+      "url": "https://user-images.githubusercontent.com/26092469/181912481-b8e8c377-d633-49a9-ab5e-56f3c98344b2.jpg"
+    },
+    {
+      "albumId": 8,
+      "id": 20,
+      "title": "TheLordOfTheRings&TheHobbit1",
+      "url": "https://user-images.githubusercontent.com/26092469/181913633-9f1acfd1-2e0c-43d8-be61-d23c2c0cf775.jpg"
+    },
+    {
+      "albumId": 8,
+      "id": 21,
+      "title": "TheLordOfTheRings&TheHobbit2",
+      "url": "https://user-images.githubusercontent.com/26092469/181913635-9334d35a-c100-4dcb-8f41-16ec77f76077.jpg"
+    },
+    {
+      "albumId": 9,
+      "id": 22,
+      "title": "CitiesOfTheWorld1",
+      "url": "https://user-images.githubusercontent.com/26092469/181913803-28a01b04-eda1-4f84-b28a-6f7bede2fd32.jpg"
+    },
+    {
+      "albumId": 9,
+      "id": 23,
+      "title": "CitiesOfTheWorld2",
+      "url": "https://user-images.githubusercontent.com/26092469/181913804-c58d23e7-06f8-44ec-b158-48dbde7de816.jpg"
+    },
+    {
+      "albumId": 10,
+      "id": 24,
+      "title": "Nature1",
+      "url": "https://user-images.githubusercontent.com/26092469/181913883-1ead2259-678a-4c50-b4dc-8b4b7c764b03.jpg"
+    },
+    {
+      "albumId": 10,
+      "id": 25,
+      "title": "Nature2",
+      "url": "https://user-images.githubusercontent.com/26092469/181913886-10db1f1a-27a9-4d8c-bfa1-6b06e2488e06.jpg"
+    },
+    {
+      "albumId": 11,
+      "id": 26,
+      "title": "Bridges1",
+      "url": "https://user-images.githubusercontent.com/26092469/181914736-6c2cd765-95e6-4722-bae7-06ab00e51627.jpg"
+    },
+    {
+      "albumId": 11,
+      "id": 27,
+      "title": "Bridges2",
+      "url": "https://user-images.githubusercontent.com/26092469/181914739-58fefcbb-6e69-4c27-99ed-c7502ed4d269.jpg"
+    },
+    {
+      "albumId": 12,
+      "id": 28,
+      "title": "Churches1",
+      "url": "https://user-images.githubusercontent.com/26092469/181914908-c44edbe3-1956-4baf-b9bd-a0c5f14a6167.jpg"
+    },
+    {
+      "albumId": 12,
+      "id": 29,
+      "title": "Churches2",
+      "url": "https://user-images.githubusercontent.com/26092469/181914907-31d8edf7-29ef-46c8-b46f-16601cae45f8.jpg"
+    },
+    {
+      "albumId": 13,
+      "id": 30,
+      "title": "FairyTales1",
+      "url": "https://user-images.githubusercontent.com/26092469/181915026-80609e23-f0e4-47ed-9120-6c25f08d841c.jpg"
+    }
+  ]
+}

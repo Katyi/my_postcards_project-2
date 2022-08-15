@@ -4,18 +4,18 @@ import AlbumService from '../components/API/AlbumService'
 import Loader from '../components/UI/Loader/Loader'
 import { useFetching } from '../hooks/useFetching'
 
-export default function AlbumIdPage() {
+export default function AlbumIdPage(id) {
   const params = useParams()
   const [album, setAlbum] = useState({});
   const [photos, setPhotos] = useState([]);
   const [fetchAlbumById, isLoading] = useFetching(async (id) => {
     const response = await AlbumService.getById(id)
-    setAlbum(response.data);
+    setAlbum(response);
   })
 
   const [fetchPhotos] = useFetching(async (id) => {
     const response = await AlbumService.getPhotosByAlbumId(id)
-    setPhotos(response.data);
+    setPhotos(response);
   })
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function AlbumIdPage() {
           <Loader />
         </div>
         : <div>
-          <div className='pageTitle'>You opened the album #{album.id} {album.title}</div>
+          <div className='pageTitle'>You opened the album #{params.id} {album.title}</div>
           {photos.map(photo =>
             <div key={photo.id} style={{marginTop: 15, display: 'inline-flex', padding: 20}}>
               <img alt="Images" style={{width: 550}} src={photo.url} />
