@@ -29,17 +29,28 @@ function Albums() {
   }, [])
   
   const createAlbum = async (album) => {
+    const response = await fetch('/albums', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(album)
+    })
     const lastPage = Math.ceil((albums.length + 1) / limit);
-    const newAlbum = {
-      ...album, id: albums.length + 1
-    }
-    setAlbums([...albums, newAlbum])
+    const data = await response.json()
+    setAlbums([...albums, data])
     setModal(false)
     changePage(lastPage)
   }
   
-  const removeAlbum = (album) => {
-    setAlbums(albums.filter(a => a.id !== album.id))
+  const removeAlbum = async (album) => {
+    // if (window.confirm('Are you sure you want to delete?')) {
+    await fetch(`/albums/${album.id}`, { method: 'DELETE' })
+    setAlbums(albums.filter((item) => item.id !== album.id))
+    // }
+    const lastPage = Math.ceil((albums.length - 1) / limit);
+    console.log(lastPage)
+    changePage(lastPage)
   }
 
   const changePage = (pageNumber) => {
