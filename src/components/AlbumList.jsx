@@ -2,7 +2,7 @@ import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import AlbumItem from "./AlbumItem";
 
-const AlbumList = ({ remove, openModal, upDate, albums, title }) => {
+const AlbumList = ({ remove, upDate, albums, title}) => {
   if (!albums.length) {
     return (
       <div className="aboutPage">

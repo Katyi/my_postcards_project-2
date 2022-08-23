@@ -24,7 +24,7 @@ const AlbumItem = (props) => {
           UpDate
         </MyButton>
         <MyModal visible={modal} setVisible={setModal}>
-          <AlbumUpdForm upDate={props.upDate} album={props.album} />
+          <AlbumUpdForm upDate={props.upDate} album={props.album}/>
         </MyModal>
         <MyButton onClick={() => props.remove(props.album)}>
           Delete
