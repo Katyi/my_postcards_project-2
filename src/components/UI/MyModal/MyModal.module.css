@@ -6,6 +6,7 @@
   left: 0;
   display: none;
   background: rgba(0,0,0, 0.4);
+  /* opacity: 0; */
 }
 
 .myModalContent {
@@ -19,4 +20,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* opacity: 1; */
 }

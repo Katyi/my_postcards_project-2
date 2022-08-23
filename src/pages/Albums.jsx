@@ -11,7 +11,7 @@ import Pagination from "../components/UI/pagination/Pagination";
 
 function Albums() {
   const [albums, setAlbums] = useState([]);
-  const [modal, setModal] = useState(false);
+  let [modal, setModal] = useState(false);
   const [limit] = useState(5);
   const [page, setPage] = useState(1);
 
@@ -49,8 +49,24 @@ function Albums() {
     setAlbums(albums.filter((item) => item.id !== album.id))
     // }
     const lastPage = Math.ceil((albums.length - 1) / limit);
-    console.log(lastPage)
     changePage(lastPage)
+  }
+
+  const updateAlbum = async (album, UpdItem) => {
+    const response = await fetch(`/albums/${album.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(UpdItem)
+    })
+    const data = await response.json()
+    setAlbums(
+      albums.map((item) => (item.id === album.id ? {
+        ...item, ...
+          data } : item))
+    )
+    setModal(false)
   }
 
   const changePage = (pageNumber) => {
@@ -63,7 +79,7 @@ function Albums() {
         Create an album of postcards
       </MyButton>
       <MyModal visible={modal} setVisible={setModal}>
-      <AlbumForm create={createAlbum} />
+      <AlbumForm create={createAlbum} ind='1'/>
       </MyModal>
       
       {albumError &&
@@ -71,7 +87,7 @@ function Albums() {
       }
       {isAlbumsLoading
         ? <div style={{ display: 'flex', justifyContent: 'center', marginTop: 250 }}><Loader /></div>
-        : <AlbumList remove={removeAlbum} albums={currentAlbums} title="Albums of postcards"/>
+        : <AlbumList remove={removeAlbum} upDate={updateAlbum} albums={currentAlbums} title="Albums of postcards"/>
       }
       <Pagination limit={limit} totalAlbums={albums.length} paginate={changePage} page={page} />
     </div>

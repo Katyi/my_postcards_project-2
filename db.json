@@ -64,6 +64,26 @@
       "id": 13,
       "title": "Fairy Tales",
       "description": "Postcards on the theme Fairy Tales"
+    },
+    {
+      "title": "aaa",
+      "description": "aaaa",
+      "id": 14
+    },
+    {
+      "title": "bbb",
+      "description": "bbbbb",
+      "id": 15
+    },
+    {
+      "title": "ccc",
+      "description": "cccc",
+      "id": 16
+    },
+    {
+      "title": "ddd",
+      "description": "ddd",
+      "id": 17
     }
   ],
   "photos": [
@@ -216,6 +236,36 @@
       "id": 25,
       "title": "Nature2",
       "url": "https://user-images.githubusercontent.com/26092469/181913886-10db1f1a-27a9-4d8c-bfa1-6b06e2488e06.jpg"
+    },
+    {
+      "albumId": 11,
+      "id": 26,
+      "title": "Bridges1",
+      "url": "https://user-images.githubusercontent.com/26092469/181914736-6c2cd765-95e6-4722-bae7-06ab00e51627.jpg"
+    },
+    {
+      "albumId": 11,
+      "id": 27,
+      "title": "Bridges2",
+      "url": "https://user-images.githubusercontent.com/26092469/181914739-58fefcbb-6e69-4c27-99ed-c7502ed4d269.jpg"
+    },
+    {
+      "albumId": 12,
+      "id": 28,
+      "title": "Churches1",
+      "url": "https://user-images.githubusercontent.com/26092469/181914908-c44edbe3-1956-4baf-b9bd-a0c5f14a6167.jpg"
+    },
+    {
+      "albumId": 12,
+      "id": 29,
+      "title": "Churches2",
+      "url": "https://user-images.githubusercontent.com/26092469/181914907-31d8edf7-29ef-46c8-b46f-16601cae45f8.jpg"
+    },
+    {
+      "albumId": 13,
+      "id": 30,
+      "title": "FairyTales1",
+      "url": "https://user-images.githubusercontent.com/26092469/181915026-80609e23-f0e4-47ed-9120-6c25f08d841c.jpg"
     }
   ]
 }

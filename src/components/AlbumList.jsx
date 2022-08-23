@@ -2,7 +2,7 @@ import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import AlbumItem from "./AlbumItem";
 
-const AlbumList = ({ albums, title, remove }) => {
+const AlbumList = ({ remove, openModal, upDate, albums, title }) => {
   if (!albums.length) {
     return (
       <div className="aboutPage">
@@ -23,7 +23,7 @@ const AlbumList = ({ albums, title, remove }) => {
             timeout={500}
             classNames="album"
           >
-            <AlbumItem remove={remove} number={index + 1} album={album}/>
+            <AlbumItem remove={remove} upDate={upDate} number={index + 1} album={album}/>
           </CSSTransition>
         )}
       </TransitionGroup>
