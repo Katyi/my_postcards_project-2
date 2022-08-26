@@ -29,7 +29,7 @@ function Albums() {
   }, [])
   
   const createAlbum = async (album) => {
-    const response = await fetch('/albums', {
+    const response = await fetch('https://my-postcards-api.herokuapp.com/albums', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function Albums() {
   
   const removeAlbum = async (album) => {
     // if (window.confirm('Are you sure you want to delete?')) {
-    await fetch(`/albums/${album.id}`, { method: 'DELETE' })
+    await fetch(`https://my-postcards-api.herokuapp.com/albums/${album.id}`, { method: 'DELETE' })
     setAlbums(albums.filter((item) => item.id !== album.id))
     // }
     const lastPage = Math.ceil((albums.length - 1) / limit);
@@ -53,7 +53,7 @@ function Albums() {
   }
 
   const updateAlbum = async (album, UpdItem) => {
-    const response = await fetch(`/albums/${album.id}`, {
+    const response = await fetch(`https://my-postcards-api.herokuapp.com/albums/${album.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

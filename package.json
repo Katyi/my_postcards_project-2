@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://katyi.github.io/my_postcards_project-2",
-  "proxy": "https://my-postcards-api.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
